@@ -1,7 +1,5 @@
-
-
 const DisplayEntries = (props) => {
-    const entries = props.entries;
+  const entries = props.entries;
   return (
     <table>
       <thead>
@@ -14,7 +12,7 @@ const DisplayEntries = (props) => {
       <tbody>
         {entries.map((entry, index) => {
           return (
-            <tr>
+            <tr key={index}>
               <td>{index + 1}</td>
               <td>{entry.weight}</td>
               <td>{entry.date}</td>

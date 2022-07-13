@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const AddEntryForm = (props) => {
-  const [weight, setWeight] = useState(0);
+  const [weight, setWeight] = useState();
   const [date, setDate] = useState("");
 
   function handleSubmit(e) {
