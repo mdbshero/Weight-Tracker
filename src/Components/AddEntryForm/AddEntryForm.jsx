@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import './AddEntryForm.css'
+import Button from '@mui/material/Button';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
 
 const AddEntryForm = (props) => {
   const [weight, setWeight] = useState();
@@ -34,7 +41,7 @@ const AddEntryForm = (props) => {
           onChange={(e) => setDate(e.target.value)}
         />
       </div>
-      <button className="btn btn-primary" type="submit" style={{'margin-top': '1em'}} >Add</button>
+      <Button variant="contained" type="submit">Add</Button>
     </form>
   );
 };

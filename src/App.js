@@ -7,7 +7,7 @@ import "./App.css";
 function App() {
   const [entries, setEntries] = useState([
     { weight: 175, date: "07-13-2022" },
-    { weight: 1764, date: "07-14-2022" },
+    { weight: 176, date: "07-14-2022" },
   ]);
 
   function addNewEntry(entry) {
