@@ -1,12 +1,7 @@
 import React, { useState } from "react";
-import './AddEntryForm.css'
-import Button from '@mui/material/Button';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
+import "./AddEntryForm.css";
+import Button from "@mui/material/Button";
+import { FormControl, InputLabel, Input, TextField } from "@mui/material";
 
 const AddEntryForm = (props) => {
   const [weight, setWeight] = useState();
@@ -22,10 +17,12 @@ const AddEntryForm = (props) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='form-grid'>
+    <form onSubmit={handleSubmit} className="form-grid">
       <div className="form-group">
-        <label>Weight</label>
-        <input
+        <TextField
+          helperText="Please Enter Your Weight"
+          label="Weight"
+          required
           className="form-control"
           type="number"
           value={weight}
@@ -33,15 +30,18 @@ const AddEntryForm = (props) => {
         />
       </div>
       <div className="form-group">
-        <label>Date</label>
-        <input
+        <TextField
+          helperText="Please Enter Your Weight"
+          required
           className="form-control"
           type="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
         />
       </div>
-      <Button variant="contained" type="submit">Add</Button>
+      <Button variant="contained" type="submit">
+        Add
+      </Button>
     </form>
   );
 };
